@@ -20,12 +20,6 @@ $(document).ready( function() {
     $('#compClicked').text('The computer chose: ' + compChoice)
   }
 
-  function compare(compChoice) {
-    compareUserRock(compChoice)
-    compareUserPaper(compChoice)
-    compareUserScissors(compChoice)
-  }
-
   function compareUserRock(compChoice) {
     userChoice = 'rock'
     outcome = $('#outcome')
@@ -80,21 +74,21 @@ $(document).ready( function() {
     userChoice = 'rock'
     compChooses()
     printChoices()
-    compare()
+    compareUserRock(compChoice)
   })
 
   $('#paper').on('click', function() {
     userChoice = 'paper'
     compChooses()
     printChoices()
-    compare()
+    compareUserPaper(compChoice)
   })
 
   $('#scissors').on('click', function() {
     userChoice = 'scissors'
     compChooses()
     printChoices()
-    compare()
+    compareUserScissors(compChoice)
   })
 
 })
