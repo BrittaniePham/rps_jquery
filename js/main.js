@@ -39,6 +39,8 @@ $(document).ready( function() {
         userScore++
         break
     }
+    $('#userScore').text('Your score: ' + userScore)
+    $('#compScore').text("Computer's score: " + compScore)
   }
 
   function compareUserPaper(compChoice) {
