@@ -20,32 +20,28 @@ $(document).ready( function() {
     compChoice = options[Math.floor(Math.random() * options.length)]
   }
 
+  function printScore() {
+    $('#userClicked').text('You chose: ' + userChoice)
+    $('#compClicked').text('The computer chose: ' + compChoice)
+  }
+
   //LISTENERS
   $('#rock').on('click', function() {
     userChoice = 'rock'
-    console.log('You chose: ' + userChoice)
-    $('#userClicked').text('You chose: ' + userChoice)
     compChooses()
-    console.log('The computer chose: ' + compChoice)
-    $('#compClicked').text('The computer chose: ' + compChoice)
+    printScore()
   })
 
   $('#paper').on('click', function() {
     userChoice = 'paper'
-    console.log('You chose: ' + userChoice)
-    $('#userClicked').text('You chose: ' + userChoice)
     compChooses()
-    console.log('The computer chose: ' + compChoice)
-    $('#compClicked').text('The computer chose: ' + compChoice)
+    printScore()
   })
 
   $('#scissors').on('click', function() {
     userChoice = 'scissors'
-    console.log('You chose: ' + userChoice)
-    $('#userClicked').text('You chose: ' + userChoice)
     compChooses()
-    console.log('The computer chose: ' + compChoice)
-    $('#compClicked').text('The computer chose: ' + compChoice)
+    printScore()
   })
 
 })
