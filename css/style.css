@@ -12,6 +12,12 @@ img {
   display: inline-block;
 }
 
+img:hover{
+  background-color: rgb(192, 237, 255);
+  height: 210px;
+  width: 210px;
+}
+
 .scores {
   margin: auto;
   color: black;
@@ -25,7 +31,8 @@ img {
 }
 
 button {
-  background-color: #e7e7e7; color:black;
+  background-color: #e7e7e7;
+  color:black;
   padding: 10px 22px;
   font-size: 16px;
   text-align: center;
