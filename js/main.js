@@ -5,9 +5,12 @@ $(document).ready( function() {
   //code that runs
 
   //VARIABLES -------------------------------------------------
+
   var userChoice
   var options = ['rock', 'paper', 'scissors']
   var compChoice
+  var userScore = 0
+  var compScore = 0
 
   //FUNCTIONS -------------------------------------------------
 
@@ -29,9 +32,11 @@ $(document).ready( function() {
         break
       case 'paper':
         outcome.text("PAPER BEATS ROCK... YOU LOSE")
+        compScore++
         break
       case 'scissors':
         outcome.text("ROCK BEATS SCISSORS! YOU WIN!")
+        userScore++
         break
     }
   }
@@ -42,12 +47,14 @@ $(document).ready( function() {
     switch(compChoice) {
       case 'rock':
         outcome.text("PAPER BEATS ROCK! YOU WIN!")
+        userScore++
         break
       case 'paper':
         outcome.text("IT'S A TIE!")
         break
       case 'scissors':
         outcome.text("SCISSORS BEATS PAPER... YOU LOSE")
+        compScore++
         break
     }
   }
@@ -58,9 +65,11 @@ $(document).ready( function() {
     switch(compChoice) {
       case 'rock':
         outcome.text("ROCK BEATS SCISSORS... YOU LOSE")
+        compScore++
         break
       case 'paper':
         outcome.text("SCISSORS BEATS PAPER! YOU WIN!")
+        userScore++
         break
       case 'scissors':
         outcome.text("IT'S A TIE!")
