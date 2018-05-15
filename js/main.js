@@ -59,6 +59,8 @@ $(document).ready( function() {
         compScore++
         break
     }
+    $('#userScore').text('Your score: ' + userScore)
+    $('#compScore').text("Computer's score: " + compScore)
   }
 
   function compareUserScissors(compChoice) {
@@ -77,6 +79,8 @@ $(document).ready( function() {
         outcome.text("IT'S A TIE!")
         break
     }
+    $('#userScore').text('Your score: ' + userScore)
+    $('#compScore').text("Computer's score: " + compScore)
   }
 
   // LISTENERS -------------------------------------------------
