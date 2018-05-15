@@ -11,3 +11,23 @@ img {
   text-align: center;
   display: inline-block;
 }
+
+.scores {
+  margin: auto;
+  color: black;
+  border: 5px double rgb(107, 107, 107);
+  text-align: center;
+  width: 40%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  background-color: rgb(230, 230, 230);
+  line-height: auto;
+}
+
+button {
+  background-color: #e7e7e7; color:black;
+  padding: 10px 22px;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 10%;
+}

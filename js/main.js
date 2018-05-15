@@ -83,6 +83,7 @@ $(document).ready( function() {
     $('#compScore').text("Computer's score: " + compScore)
   }
 
+
   // LISTENERS -------------------------------------------------
 
   $('#rock').on('click', function() {
@@ -106,4 +107,7 @@ $(document).ready( function() {
     compareUserScissors(compChoice)
   })
 
+  $('#restart').on('click', function() {
+    window.location.reload();
+  })
 })
