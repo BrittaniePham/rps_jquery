@@ -18,6 +18,21 @@ img:hover{
   width: 210px;
 }
 
+.winner {
+  color: green;
+  font-weight: 600;
+}
+
+.loser {
+  color: red;
+  font-weight: 600;
+}
+
+.tie {
+  color: black;
+  font-weight: 600;
+}
+
 .scores {
   margin: auto;
   color: black;

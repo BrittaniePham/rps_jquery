@@ -24,17 +24,25 @@ $(document).ready( function() {
   }
 
   function compareUserRock(compChoice) {
-    userChoice = 'rock'
     outcome = $('#outcome')
     switch(compChoice) {
       case 'rock':
+        $('#outcome').removeClass('loser')
+        $('#outcome').removeClass('winner')
+        $('#outcome').addClass('tie')
         outcome.text("IT'S A TIE!")
         break
       case 'paper':
+        $('#outcome').addClass('loser')
+        $('#outcome').removeClass('winner')
+        $('#outcome').removeClass('tie')
         outcome.text("PAPER BEATS ROCK... YOU LOSE")
         compScore++
         break
       case 'scissors':
+        $('#outcome').addClass('winner')
+        $('#outcome').removeClass('loser')
+        $('#outcome').removeClass('tie')
         outcome.text("ROCK BEATS SCISSORS! YOU WIN!")
         userScore++
         break
@@ -48,13 +56,22 @@ $(document).ready( function() {
     outcome = $('#outcome')
     switch(compChoice) {
       case 'rock':
+        $('#outcome').addClass('winner')
+        $('#outcome').removeClass('loser')
+        $('#outcome').removeClass('tie')
         outcome.text("PAPER BEATS ROCK! YOU WIN!")
         userScore++
         break
       case 'paper':
+        $('#outcome').removeClass('loser')
+        $('#outcome').removeClass('winner')
+        $('#outcome').addClass('tie')
         outcome.text("IT'S A TIE!")
         break
       case 'scissors':
+        $('#outcome').addClass('loser')
+        $('#outcome').removeClass('winner')
+        $('#outcome').removeClass('tie')
         outcome.text("SCISSORS BEATS PAPER... YOU LOSE")
         compScore++
         break
@@ -68,14 +85,23 @@ $(document).ready( function() {
     outcome = $('#outcome')
     switch(compChoice) {
       case 'rock':
+        $('#outcome').addClass('loser')
+        $('#outcome').removeClass('winner')
+        $('#outcome').removeClass('tie')
         outcome.text("ROCK BEATS SCISSORS... YOU LOSE")
         compScore++
         break
       case 'paper':
+        $('#outcome').addClass('winner')
+        $('#outcome').removeClass('loser')
+        $('#outcome').removeClass('tie')
         outcome.text("SCISSORS BEATS PAPER! YOU WIN!")
         userScore++
         break
       case 'scissors':
+        $('#outcome').removeClass('loser')
+        $('#outcome').removeClass('winner')
+        $('#outcome').addClass('tie')
         outcome.text("IT'S A TIE!")
         break
     }
@@ -110,4 +136,8 @@ $(document).ready( function() {
   $('#restart').on('click', function() {
     window.location.reload();
   })
-})
+});
+
+// getElementById('restart').addEventListener('click', function() {
+//    window.location.reload();
+// })
